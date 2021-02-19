@@ -14,7 +14,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="detail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Ld-RX-cmo">
+                                <rect key="frame" x="97" y="392" width="220" height="112"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Ld-RX-cmo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4wp-nl-vlx"/>
+                            <constraint firstItem="8Ld-RX-cmo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Q22-3x-g5z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +32,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="detail-logo" width="220" height="112"/>
+    </resources>
 </document>
