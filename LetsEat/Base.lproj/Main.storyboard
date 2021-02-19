@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="FAw-Uk-wlR">
             <objects>
                 <viewController id="s76-Xm-gzs" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U96-SZ-zJQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="1ng-nH-gjg"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="1ng-nH-gjg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fat-lz-8su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="806" y="-311"/>
         </scene>
-        <!--Item 1-->
+        <!--Explore-->
         <scene sceneID="yft-xv-TXc">
             <objects>
                 <viewController id="A9g-0S-CYX" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qUO-Kl-GaX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="YmB-zl-ZIJ"/>
+                    <tabBarItem key="tabBarItem" title="Explore" id="YmB-zl-ZIJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgT-zf-37h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
