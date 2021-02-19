@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="-311.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="yft-xv-TXc">
             <objects>
-                <viewController id="A9g-0S-CYX" sceneMemberID="viewController">
+                <viewController id="A9g-0S-CYX" customClass="ExploreViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gP4-Lh-Inv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="qUO-Kl-GaX"/>
                     </view>
                     <navigationItem key="navigationItem" id="wQ8-xF-vjK"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rxU-Wa-Xpn" id="hKs-rC-NzB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgT-zf-37h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

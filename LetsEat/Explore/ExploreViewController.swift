@@ -9,7 +9,9 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
