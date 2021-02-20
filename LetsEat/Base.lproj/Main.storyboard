@@ -51,6 +51,10 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="A9g-0S-CYX" id="n5s-a8-Mfg"/>
+                                    <outlet property="delegate" destination="A9g-0S-CYX" id="lTC-KE-139"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
