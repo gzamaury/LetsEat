@@ -35,6 +35,10 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func unwindLocationCancel(segue:UIStoryboardSegue){
+        
+    }
+    
 
     /*
     // MARK: - Navigation

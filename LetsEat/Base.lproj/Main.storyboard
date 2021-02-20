@@ -101,9 +101,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uhy-xy-Cyk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qss-Zj-9yC"/>
+                    <navigationItem key="navigationItem" id="Qss-Zj-9yC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7R3-Qx-rMW">
+                            <connections>
+                                <segue destination="4sK-i2-HDs" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="UgZ-gH-9AV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="02x-Jj-wHl"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eh-78-lMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4sK-i2-HDs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3604.347826086957" y="-1024.5535714285713"/>
         </scene>
