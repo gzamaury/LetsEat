@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="-1024.5535714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Restauran List View Controller-->
         <scene sceneID="4Dk-K0-RaN">
             <objects>
-                <viewController id="nTu-sG-IAa" sceneMemberID="viewController">
+                <viewController id="nTu-sG-IAa" customClass="RestauranListViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFx-5S-6Hj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,15 +109,20 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r5H-K9-6HZ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="r5H-K9-6HZ">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cX2-UD-q7L">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="Demo Grey"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nTu-sG-IAa" id="zjn-y2-gyO"/>
+                                    <outlet property="delegate" destination="nTu-sG-IAa" id="OBK-0K-HDJ"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -129,6 +134,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLD-CV-goH"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="b72-5D-KkX" id="i9e-RV-AmK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJE-2w-Uq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
