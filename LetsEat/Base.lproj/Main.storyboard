@@ -16,7 +16,18 @@
                     <view key="view" contentMode="scaleToFill" id="hCc-hm-1JC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="prA-56-Uov">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U96-SZ-zJQ" firstAttribute="bottom" secondItem="prA-56-Uov" secondAttribute="bottom" id="0Vw-JO-R9K"/>
+                            <constraint firstItem="U96-SZ-zJQ" firstAttribute="trailing" secondItem="prA-56-Uov" secondAttribute="trailing" id="9Pn-4H-WIh"/>
+                            <constraint firstItem="prA-56-Uov" firstAttribute="top" secondItem="U96-SZ-zJQ" secondAttribute="top" id="SRF-Ev-58E"/>
+                            <constraint firstItem="prA-56-Uov" firstAttribute="leading" secondItem="U96-SZ-zJQ" secondAttribute="leading" id="kfK-4C-s05"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="U96-SZ-zJQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="JNr-MF-stn"/>
