@@ -98,7 +98,19 @@
                     <view key="view" contentMode="scaleToFill" id="GSy-2X-2qr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-2b-X6G">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uhy-xy-Cyk" firstAttribute="bottom" secondItem="E5e-2b-X6G" secondAttribute="bottom" id="BBK-V5-4iT"/>
+                            <constraint firstItem="uhy-xy-Cyk" firstAttribute="trailing" secondItem="E5e-2b-X6G" secondAttribute="trailing" id="gNL-IR-m3W"/>
+                            <constraint firstItem="E5e-2b-X6G" firstAttribute="leading" secondItem="uhy-xy-Cyk" secondAttribute="leading" id="pa9-Uk-F6F"/>
+                            <constraint firstItem="E5e-2b-X6G" firstAttribute="top" secondItem="uhy-xy-Cyk" secondAttribute="top" id="stZ-wi-Fhv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uhy-xy-Cyk"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qss-Zj-9yC">
