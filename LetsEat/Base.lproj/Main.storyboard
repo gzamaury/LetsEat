@@ -166,6 +166,16 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WdZ-pz-OkO" id="CBG-gx-o2b">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBT-E5-msq">
+                                                    <rect key="frame" x="335" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="U9w-XX-Ztu" kind="show" id="fk2-7P-qSB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xbu-Gw-sOi">
@@ -197,6 +207,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqg-ES-jHK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3625" y="-706"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xrq-nP-JG6">
+            <objects>
+                <viewController id="U9w-XX-Ztu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QSC-o0-XHH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRn-bN-h4s">
+                                <rect key="frame" x="175.5" y="437.5" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IRn-bN-h4s" firstAttribute="centerY" secondItem="QSC-o0-XHH" secondAttribute="centerY" id="9bp-4C-0bh"/>
+                            <constraint firstItem="IRn-bN-h4s" firstAttribute="centerX" secondItem="QSC-o0-XHH" secondAttribute="centerX" id="w7G-H1-cPH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jcz-XM-0ax"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mUf-Lz-uCi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ka-U2-g91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4446" y="-706"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Myp-gQ-2Gq">
