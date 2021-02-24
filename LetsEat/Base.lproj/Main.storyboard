@@ -98,6 +98,8 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="imgExplore" destination="fJ2-sQ-Udp" id="75c-SO-iAT"/>
+                                            <outlet property="lblName" destination="mmO-N1-gTh" id="GzE-wH-DxC"/>
                                             <segue destination="nTu-sG-IAa" kind="show" id="LR4-Y0-NdT"/>
                                         </connections>
                                     </collectionViewCell>
