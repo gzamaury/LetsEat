@@ -440,10 +440,10 @@
             </objects>
             <point key="canvasLocation" x="4446" y="-706"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="Myp-gQ-2Gq">
             <objects>
-                <viewController id="lwO-2t-PpK" sceneMemberID="viewController">
+                <viewController id="lwO-2t-PpK" customClass="LocationViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSy-2X-2qr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,6 +489,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="02x-Jj-wHl"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="E5e-2b-X6G" id="DeW-cX-zXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eh-78-lMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="4sK-i2-HDs" userLabel="Exit" sceneMemberID="exit"/>
