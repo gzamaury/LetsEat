@@ -18,6 +18,14 @@ class ExploreDataManager {
         }
     }
     
+    func numberOfItems() -> Int {
+        return items.count
+    }
+    
+    func explore(at index:IndexPath) -> ExploreItem {
+        return items[index.item]
+    }
+    
     fileprivate func loadData() -> [[String: AnyObject]] {
         guard let path = Bundle.main.path(forResource: "ExploreData", ofType: "plist"), let items = NSArray(contentsOfFile: path)
             else {
