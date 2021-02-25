@@ -11,19 +11,20 @@ import UIKit
 class LocationViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let locations = ["Aspen","Boston","Charleston","Chicago","Houston","Las Vegas","Los Angeles","Miami","New Orleans","New York","Philadelphia","Portland","San Antonio","San Francisco","Washington District of Columbia"]
+    let manager = LocationDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.fetch()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations.count
+        return manager.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = locations[indexPath.row]
+        cell.textLabel?.text = manager.locationItem(at: indexPath)
         return cell
     }
 }
