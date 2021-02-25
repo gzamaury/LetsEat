@@ -18,6 +18,7 @@
 		9697F14925E71C01003218AE /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F14825E71C01003218AE /* LocationDataManager.swift */; };
 		9697F14D25E75474003218AE /* MapLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9697F14C25E75473003218AE /* MapLocations.plist */; };
 		9697F14F25E754F7003218AE /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F14E25E754F7003218AE /* RestaurantItem.swift */; };
+		9697F15125E7616B003218AE /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F15025E7616B003218AE /* MapDataManager.swift */; };
 		96B18F6625DF7B50002199D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B18F6525DF7B50002199D3 /* AppDelegate.swift */; };
 		96B18F6825DF7B50002199D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B18F6725DF7B50002199D3 /* SceneDelegate.swift */; };
 		96B18F6D25DF7B50002199D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B18F6B25DF7B50002199D3 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		9697F14825E71C01003218AE /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		9697F14C25E75473003218AE /* MapLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapLocations.plist; sourceTree = "<group>"; };
 		9697F14E25E754F7003218AE /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
+		9697F15025E7616B003218AE /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
 		96B18F6225DF7B50002199D3 /* LetsEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B18F6525DF7B50002199D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B18F6725DF7B50002199D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				9697F14C25E75473003218AE /* MapLocations.plist */,
 				9697F14E25E754F7003218AE /* RestaurantItem.swift */,
+				9697F15025E7616B003218AE /* MapDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9642BE5B25E5BDDA00AAD723 /* ExploreItem.swift in Sources */,
+				9697F15125E7616B003218AE /* MapDataManager.swift in Sources */,
 				9642BE6025E5CB5800AAD723 /* ExploreCell.swift in Sources */,
 				96B674A425E217DA0082A0D4 /* RestauranListViewController.swift in Sources */,
 				96B18F6625DF7B50002199D3 /* AppDelegate.swift in Sources */,
