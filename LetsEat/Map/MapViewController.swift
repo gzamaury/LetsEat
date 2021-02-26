@@ -11,10 +11,20 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    let manager = MapDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialize()
+    }
+    
+    func initialize() {
+        manager.fetch { (annotations) in addMap(annotations)
+        }
+    }
+    
+    func addMap(_ annotations: [RestaurantItem]) {
+        mapView.setRegion(manager.currentRegion(latDelta: 0.5, longDelta: 0.5), animated: true)
+        mapView.addAnnotations(manager.annotations)
     }
 }

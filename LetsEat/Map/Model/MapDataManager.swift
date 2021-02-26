@@ -16,7 +16,7 @@ class MapDataManager: DataManager {
         return items
     }
     
-    func fetch(completion:(_ annotations: [RestaurantItem]) -> ()) {
+    func fetch(completion: (_ annotations: [RestaurantItem]) -> ()) {
         if items.count > 0 { items.removeAll() }
         for data in load(file: "MapLocations") {
             items.append(RestaurantItem(dict: data))
