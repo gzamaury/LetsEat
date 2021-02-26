@@ -84,6 +84,8 @@
 		9649A32125E0767500B57B12 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				9642BE5725E5BC9900AAD723 /* Model */,
+				9642BE5E25E5CAFD00AAD723 /* View */,
 				9649A32225E0774100B57B12 /* ExploreViewController.swift */,
 			);
 			path = Explore;
@@ -164,8 +166,6 @@
 				9697F15225E766BE003218AE /* Misc */,
 				9697F14A25E753D4003218AE /* Map */,
 				9697F14125E70D85003218AE /* Location */,
-				9642BE5E25E5CAFD00AAD723 /* View */,
-				9642BE5725E5BC9900AAD723 /* Model */,
 				96B674A225E2177C0082A0D4 /* Restaurants */,
 				9649A32125E0767500B57B12 /* Explore */,
 				96B18F6525DF7B50002199D3 /* AppDelegate.swift */,
