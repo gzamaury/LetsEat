@@ -8,7 +8,31 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExploreViewController: UIViewController, UICollectionViewDelegate {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    let manager = ExploreDataManager()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initialize()
+    }
+}
+
+
+// MARK: Private Extension
+private extension ExploreViewController {
+    
+    func initialize() {
+        manager.fetch()
+    }
+    
+    @IBAction func unwindLocationCancel(segue:UIStoryboardSegue){
+    }
+}
+
+// MARK: UICollectionViewDataSource
+extension ExploreViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind Kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: Kind, withReuseIdentifier: "header", for: indexPath)
@@ -28,29 +52,4 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.imgExplore.image = UIImage(named: item.image)
         return cell
     }
-    
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    let manager = ExploreDataManager()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        manager.fetch()
-    }
-    
-    @IBAction func unwindLocationCancel(segue:UIStoryboardSegue){
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
