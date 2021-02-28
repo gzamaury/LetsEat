@@ -22,6 +22,7 @@
 		963B0EF525EB368900A25110 /* Philadelphia.json in Resources */ = {isa = PBXBuildFile; fileRef = 963B0EE725EB368900A25110 /* Philadelphia.json */; };
 		963B0EF625EB368900A25110 /* San Francisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 963B0EE825EB368900A25110 /* San Francisco.json */; };
 		963B0EF825EB396000A25110 /* RestaurantAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B0EF725EB396000A25110 /* RestaurantAPIManager.swift */; };
+		963B0EFA25EB42DB00A25110 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B0EF925EB42DB00A25110 /* LocationItem.swift */; };
 		9642BE5925E5BCCD00AAD723 /* ExploreData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9642BE5825E5BCCD00AAD723 /* ExploreData.plist */; };
 		9642BE5B25E5BDDA00AAD723 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642BE5A25E5BDDA00AAD723 /* ExploreItem.swift */; };
 		9642BE5D25E5C27000AAD723 /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642BE5C25E5C27000AAD723 /* ExploreDataManager.swift */; };
@@ -64,6 +65,7 @@
 		963B0EE725EB368900A25110 /* Philadelphia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Philadelphia.json; sourceTree = "<group>"; };
 		963B0EE825EB368900A25110 /* San Francisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "San Francisco.json"; sourceTree = "<group>"; };
 		963B0EF725EB396000A25110 /* RestaurantAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPIManager.swift; sourceTree = "<group>"; };
+		963B0EF925EB42DB00A25110 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		9642BE5825E5BCCD00AAD723 /* ExploreData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExploreData.plist; sourceTree = "<group>"; };
 		9642BE5A25E5BDDA00AAD723 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		9642BE5C25E5C27000AAD723 /* ExploreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				9697F14625E71825003218AE /* Locations.plist */,
 				9697F14825E71C01003218AE /* LocationDataManager.swift */,
+				963B0EF925EB42DB00A25110 /* LocationItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B0EFA25EB42DB00A25110 /* LocationItem.swift in Sources */,
 				9642BE5B25E5BDDA00AAD723 /* ExploreItem.swift in Sources */,
 				9697F15425E766DF003218AE /* DataManager.swift in Sources */,
 				9697F15125E7616B003218AE /* MapDataManager.swift in Sources */,

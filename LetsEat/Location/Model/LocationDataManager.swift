@@ -9,15 +9,11 @@
 import Foundation
 
 class LocationDataManager{
-    private var locations: [String] = []
+    private var locations: [LocationItem] = []
     
     func fetch() {
         for location in loadData() {
-            if let city = location["city"] as? String,
-                let state = location["state"] as? String {
-                locations.append("\(city), \(state)")
-            }
-            
+            locations.append(LocationItem(dict: location))
         }
     }
     
@@ -25,7 +21,7 @@ class LocationDataManager{
         return locations.count
     }
     
-    func locationItem(at index: IndexPath) -> String {
+    func locationItem(at index: IndexPath) -> LocationItem {
         return locations[index.item]
     }
     
