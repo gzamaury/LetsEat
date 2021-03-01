@@ -12,6 +12,8 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let manager = ExploreDataManager()
+    var selectedCity: LocationItem?
+    var headerView: ExploreHeaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

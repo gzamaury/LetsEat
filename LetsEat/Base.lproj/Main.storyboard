@@ -184,6 +184,9 @@
                                         <constraint firstAttribute="trailing" secondItem="kBF-CM-gaS" secondAttribute="trailing" id="D7e-D2-kFo"/>
                                         <constraint firstItem="kBF-CM-gaS" firstAttribute="leading" secondItem="5MB-qW-yye" secondAttribute="leading" id="SbL-0b-cE1"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="lblLocation" destination="RyG-OY-UDT" id="HZn-eg-NEM"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="A9g-0S-CYX" id="n5s-a8-Mfg"/>
