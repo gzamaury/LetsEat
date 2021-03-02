@@ -48,6 +48,7 @@
 		96B18F6D25DF7B50002199D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B18F6B25DF7B50002199D3 /* Main.storyboard */; };
 		96B18F7225DF7B52002199D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B18F7025DF7B52002199D3 /* LaunchScreen.storyboard */; };
 		96B674A425E217DA0082A0D4 /* RestauranListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B674A325E217DA0082A0D4 /* RestauranListViewController.swift */; };
+		96CAF2E825EEF20000218A16 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAF2E725EEF20000218A16 /* RestaurantCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		96B18F7125DF7B52002199D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B18F7325DF7B52002199D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B674A325E217DA0082A0D4 /* RestauranListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestauranListViewController.swift; sourceTree = "<group>"; };
+		96CAF2E725EEF20000218A16 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,9 +281,18 @@
 		96B674A225E2177C0082A0D4 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
+				96CAF2E625EEF16200218A16 /* View */,
 				96B674A325E217DA0082A0D4 /* RestauranListViewController.swift */,
 			);
 			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		96CAF2E625EEF16200218A16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96CAF2E725EEF20000218A16 /* RestaurantCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +395,7 @@
 				9642BE6025E5CB5800AAD723 /* ExploreCell.swift in Sources */,
 				96B674A425E217DA0082A0D4 /* RestauranListViewController.swift in Sources */,
 				969A186C25E9B5CD00DC3060 /* Segue.swift in Sources */,
+				96CAF2E825EEF20000218A16 /* RestaurantCell.swift in Sources */,
 				969A186E25E9BA4500DC3060 /* RestaurantDetailViewController.swift in Sources */,
 				96B18F6625DF7B50002199D3 /* AppDelegate.swift in Sources */,
 				96495AEB25E87821005477D9 /* MapViewController.swift in Sources */,
