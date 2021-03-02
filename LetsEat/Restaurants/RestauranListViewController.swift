@@ -10,10 +10,21 @@ import UIKit
 
 class RestauranListViewController: UIViewController, UICollectionViewDelegate {
     
+    var selectedRestaruant: RestaurantItem?
+    var selectedCity: LocationItem?
+    var selectedType: String?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let location = selectedCity?.city , let type = selectedType else { return }
+        print("type \(type)")
+        print(RestaurantAPIManager.loadJSON(file: location))
     }
 }
 
@@ -24,7 +35,7 @@ private extension RestauranListViewController {
 }
 
 // MARK: UICollectionViewDataSource
-extension RestauranListViewController {
+extension RestauranListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
     }
