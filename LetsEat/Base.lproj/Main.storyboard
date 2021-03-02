@@ -508,7 +508,11 @@
                                 <segue destination="4sK-i2-HDs" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="UgZ-gH-9AV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="02x-Jj-wHl"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="02x-Jj-wHl">
+                            <connections>
+                                <segue destination="4sK-i2-HDs" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="eSv-Do-3dE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="E5e-2b-X6G" id="DeW-cX-zXp"/>
