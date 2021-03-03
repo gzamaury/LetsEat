@@ -8,7 +8,7 @@
 
 import Foundation
 
-class REstaurantDataManager {
+class RestaurantDataManager {
     private var items: [RestaurantItem] = []
     
     func fetch(by locations: String, with filter: String = "All", completionHandler: (_ items: [RestaurantItem]) -> Void) {
@@ -18,9 +18,7 @@ class REstaurantDataManager {
                 let restaurants = try
                     JSONDecoder().decode([RestaurantItem].self, from: data)
                 if filter != "All" {
-                    items = restaurants.filter(
-                        { ($0.cuisines.contains(filter)) }
-                    )
+                    items = restaurants.filter({ $0.cuisines.contains(filter) })
                 } else {
                     items = restaurants
                 }

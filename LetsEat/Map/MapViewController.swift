@@ -34,8 +34,9 @@ class MapViewController: UIViewController {
 private extension MapViewController {
     func initialize() {
         mapView.delegate = self
-        manager.fetch { (annotations) in addMap(annotations)
-        }
+        manager.fetch(completion: {
+            (annotations) in addMap(annotations)
+        })
     }
     
     func addMap(_ annotations: [RestaurantItem]) {
