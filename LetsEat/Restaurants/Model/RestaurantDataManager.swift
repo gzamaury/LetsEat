@@ -33,7 +33,7 @@ class RestaurantDataManager {
         return items.count
     }
     
-    func restarantItem(at index: IndexPath) -> RestaurantItem {
+    func restaurantItem(at index: IndexPath) -> RestaurantItem {
         return items[index.item]
     }
 }

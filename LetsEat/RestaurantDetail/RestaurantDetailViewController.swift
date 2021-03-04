@@ -63,27 +63,29 @@ private extension RestaurantDetailViewController {
     }
     
     func createMap() {
-        guard let annotation = selectedRestaurant, let long = annotation.long, let lat = annotation.lat else { return }
+        guard let annotation = selectedRestaurant,
+            let long = annotation.long,
+            let lat = annotation.lat else { return }
         let location = CLLocationCoordinate2D(latitude: lat, longitude: long)
         takeSnapShot(with: location)
     }
     
     func takeSnapShot(with location: CLLocationCoordinate2D) {
-        let mapSnapShotOptions = MKMapSnapshotter.Options()
+        let mapSnapshotOptions = MKMapSnapshotter.Options()
         var loc = location
         let polyline = MKPolyline(coordinates: &loc, count: 1)
         let region = MKCoordinateRegion(polyline.boundingMapRect)
         
-        mapSnapShotOptions.region = region
-        mapSnapShotOptions.scale = UIScreen.main.scale
-        mapSnapShotOptions.size = CGSize(width: 340, height: 208)
-        mapSnapShotOptions.showsBuildings = true
-        mapSnapShotOptions.pointOfInterestFilter = .includingAll
+        mapSnapshotOptions.region = region
+        mapSnapshotOptions.scale = UIScreen.main.scale
+        mapSnapshotOptions.size = CGSize(width: 340, height: 208)
+        mapSnapshotOptions.showsBuildings = true
+        mapSnapshotOptions.pointOfInterestFilter = .includingAll
         
-        let snapShotter = MKMapSnapshotter(options: mapSnapShotOptions)
+        let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions)
         snapShotter.start() { snapshot, error in
             guard let snapshot = snapshot else { return }
-            UIGraphicsBeginImageContextWithOptions(mapSnapShotOptions.size, true, 0)
+            UIGraphicsBeginImageContextWithOptions(mapSnapshotOptions.size, true, 0)
             snapshot.image.draw(at: .zero)
             
             let identifier = "custompin"
@@ -91,7 +93,7 @@ private extension RestaurantDetailViewController {
             annotation.coordinate = location
             
             let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            pinView.image = UIImage(named: "custom-annotation")
+            pinView.image = UIImage(named: "custom-annotation")!
             let pinImage = pinView.image
             var point = snapshot.point(for: location)
             

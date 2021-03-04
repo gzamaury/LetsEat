@@ -21,6 +21,17 @@ class RestauranListViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Segue.showDetail.rawValue:
+                showRestaurantDetail(segue: segue)
+            default:
+                print("Segues not added")
+            }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         createData()
@@ -53,6 +64,13 @@ private extension RestauranListViewController {
         }
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantDetailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
+            selectedRestaruant = manager.restaurantItem(at: index)
+            viewController.selectedRestaurant = selectedRestaruant
+        }
+    }
 }
 
 // MARK: UICollectionViewDataSource
@@ -63,7 +81,7 @@ extension RestauranListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as! RestaurantCell
-        let item = manager.restarantItem(at: indexPath)
+        let item = manager.restaurantItem(at: indexPath)
         if let name = item.name { cell.lblTitle.text = name }
         if let cuisine = item.subtitle { cell.lblCuisine.text = cuisine }
         if let image = item.imageURL {
