@@ -25,6 +25,8 @@ class RestaurantDetailViewController: UITableViewController {
     // Cell Three
     @IBOutlet weak var lblOverallRating: UILabel!
     
+    @IBOutlet weak var ratingView: RatingsView!
+    
     // Cell Eight
     @IBOutlet weak var lblAddress: UILabel!
     
@@ -39,10 +41,16 @@ class RestaurantDetailViewController: UITableViewController {
     }
 }
 
+// MARK: Private Extension
 private extension RestaurantDetailViewController {
+    func createRating() {
+        ratingView.rating = 3.5
+    }
+    
     func initialize() {
         setupLabels()
         createMap()
+        createRating()
     }
     
     func setupLabels() {

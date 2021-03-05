@@ -461,6 +461,7 @@
                         <outlet property="lblName" destination="6er-aK-n02" id="gJt-C5-4hc"/>
                         <outlet property="lblOverallRating" destination="zON-CP-XRT" id="0RC-nb-aaW"/>
                         <outlet property="lblTableDetails" destination="QHZ-op-gz0" id="jU6-M2-60k"/>
+                        <outlet property="ratingView" destination="Pgj-Bj-2jp" id="fwq-01-98u"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbX-wO-Y8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
