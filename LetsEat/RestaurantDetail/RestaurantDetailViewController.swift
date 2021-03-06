@@ -43,6 +43,8 @@ class RestaurantDetailViewController: UITableViewController {
 
 // MARK: Private Extension
 private extension RestaurantDetailViewController {
+    @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) { }
+    
     func createRating() {
         ratingView.rating = 3.5
         ratingView.isEnabled = true
