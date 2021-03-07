@@ -35,6 +35,7 @@
 		9694556F25F45329003279B8 /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694556E25F45329003279B8 /* FilterItem.swift */; };
 		9694557125F453F7003279B8 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694557025F453F7003279B8 /* FilterManager.swift */; };
 		9694557325F45561003279B8 /* ImageFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694557225F45561003279B8 /* ImageFiltering.swift */; };
+		9694557525F480D3003279B8 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694557425F480D3003279B8 /* FilterCell.swift */; };
 		969482D525F1A2AD00E739F6 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969482D425F1A2AD00E739F6 /* RatingsView.swift */; };
 		9697F14525E70DFC003218AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F14425E70DFC003218AE /* LocationViewController.swift */; };
 		9697F14725E71825003218AE /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9697F14625E71825003218AE /* Locations.plist */; };
@@ -89,6 +90,7 @@
 		9694556E25F45329003279B8 /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		9694557025F453F7003279B8 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		9694557225F45561003279B8 /* ImageFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFiltering.swift; sourceTree = "<group>"; };
+		9694557425F480D3003279B8 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		969482D425F1A2AD00E739F6 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		9697F14425E70DFC003218AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9697F14625E71825003218AE /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				969A186925E9B24A00DC3060 /* PhotoFilter.storyboard */,
 				9694557025F453F7003279B8 /* FilterManager.swift */,
 				9694557225F45561003279B8 /* ImageFiltering.swift */,
+				9694557425F480D3003279B8 /* FilterCell.swift */,
 			);
 			path = PhotoFilter;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				9694557325F45561003279B8 /* ImageFiltering.swift in Sources */,
 				9697F14F25E754F7003218AE /* RestaurantItem.swift in Sources */,
 				9697F14925E71C01003218AE /* LocationDataManager.swift in Sources */,
+				9694557525F480D3003279B8 /* FilterCell.swift in Sources */,
 				9697F14525E70DFC003218AE /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
