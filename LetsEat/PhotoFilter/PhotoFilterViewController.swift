@@ -22,6 +22,7 @@ class PhotoFilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
     }
 }
 
@@ -36,7 +37,8 @@ private extension PhotoFilterViewController {
     
     func requestAccess() {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) {
-            granted in if granted {}
+            granted in
+            if granted {}
         }
     }
     
@@ -56,16 +58,16 @@ private extension PhotoFilterViewController {
         let cameraMediaType = AVMediaType.video
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
         switch cameraAuthorizationStatus {
-        case .authorized:
-            self.showCameraUserInterface()
-        case .restricted, .denied:
-            break
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: cameraMediaType) {
-                granted in
-                if granted {
-                    self.showCameraUserInterface()
-                }
+            case .authorized:
+                self.showCameraUserInterface()
+            case .restricted, .denied:
+                break
+            case .notDetermined:
+                AVCaptureDevice.requestAccess(for: cameraMediaType) {
+                    granted in
+                    if granted {
+                        self.showCameraUserInterface()
+                    }
             }
         }
     }
@@ -154,6 +156,7 @@ extension PhotoFilterViewController: UIImagePickerControllerDelegate, UINavigati
         var croppedSize: CGSize?
         var offsetX: CGFloat = 0.0
         var offsetY: CGFloat = 0.0
+        
         if size.width > size.height {
             offsetX = (size.height - size.width) / 2
             croppedSize = CGSize(width: size.height, height: size.height)
