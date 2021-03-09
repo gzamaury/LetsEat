@@ -39,6 +39,8 @@
 		9694557725F48804003279B8 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694557625F48804003279B8 /* PhotoFilterViewController.swift */; };
 		969482D525F1A2AD00E739F6 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969482D425F1A2AD00E739F6 /* RatingsView.swift */; };
 		96973B6025F7242000EAEF50 /* LetsEatModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96973B5E25F7242000EAEF50 /* LetsEatModel.xcdatamodeld */; };
+		96973B6325F736B600EAEF50 /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973B6225F736B600EAEF50 /* ReviewItem.swift */; };
+		96973B6625F73CD100EAEF50 /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973B6525F73CD100EAEF50 /* RestaurantPhotoItem.swift */; };
 		9697F14525E70DFC003218AE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F14425E70DFC003218AE /* LocationViewController.swift */; };
 		9697F14725E71825003218AE /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9697F14625E71825003218AE /* Locations.plist */; };
 		9697F14925E71C01003218AE /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F14825E71C01003218AE /* LocationDataManager.swift */; };
@@ -96,6 +98,8 @@
 		9694557625F48804003279B8 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
 		969482D425F1A2AD00E739F6 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		96973B5F25F7242000EAEF50 /* LetsEatModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsEatModel.xcdatamodel; sourceTree = "<group>"; };
+		96973B6225F736B600EAEF50 /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
+		96973B6525F73CD100EAEF50 /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
 		9697F14425E70DFC003218AE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9697F14625E71825003218AE /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
 		9697F14825E71C01003218AE /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
@@ -201,6 +205,22 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		96973B6125F7368600EAEF50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96973B6225F736B600EAEF50 /* ReviewItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96973B6425F73C8400EAEF50 /* PhotoReviews */ = {
+			isa = PBXGroup;
+			children = (
+				96973B6525F73CD100EAEF50 /* RestaurantPhotoItem.swift */,
+			);
+			path = PhotoReviews;
+			sourceTree = "<group>";
+		};
 		9697F14125E70D85003218AE /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +291,7 @@
 		969A186525E9B20200DC3060 /* ReviewForm */ = {
 			isa = PBXGroup;
 			children = (
+				96973B6125F7368600EAEF50 /* Model */,
 				969A186725E9B23D00DC3060 /* ReviewForm.storyboard */,
 				969482D425F1A2AD00E739F6 /* RatingsView.swift */,
 				96993BEA25F32EC9002B59BC /* ReviewFormViewController.swift */,
@@ -310,6 +331,7 @@
 		96B18F6425DF7B50002199D3 /* LetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				96973B6425F73C8400EAEF50 /* PhotoReviews */,
 				969A186625E9B22100DC3060 /* PhotoFilter */,
 				969A186525E9B20200DC3060 /* ReviewForm */,
 				969A186225E9B19600DC3060 /* RestaurantDetail */,
@@ -464,6 +486,7 @@
 				96682AC525EDA82A00FB360F /* ExploreHeaderView.swift in Sources */,
 				9642BE5B25E5BDDA00AAD723 /* ExploreItem.swift in Sources */,
 				9697F15425E766DF003218AE /* DataManager.swift in Sources */,
+				96973B6625F73CD100EAEF50 /* RestaurantPhotoItem.swift in Sources */,
 				9697F15125E7616B003218AE /* MapDataManager.swift in Sources */,
 				963B0EF825EB396000A25110 /* RestaurantAPIManager.swift in Sources */,
 				969482D525F1A2AD00E739F6 /* RatingsView.swift in Sources */,
@@ -480,6 +503,7 @@
 				96B18F6825DF7B50002199D3 /* SceneDelegate.swift in Sources */,
 				9649A32325E0774100B57B12 /* ExploreViewController.swift in Sources */,
 				9642BE5D25E5C27000AAD723 /* ExploreDataManager.swift in Sources */,
+				96973B6325F736B600EAEF50 /* ReviewItem.swift in Sources */,
 				9694557325F45561003279B8 /* ImageFiltering.swift in Sources */,
 				9697F14F25E754F7003218AE /* RestaurantItem.swift in Sources */,
 				9697F14925E71C01003218AE /* LocationDataManager.swift in Sources */,
