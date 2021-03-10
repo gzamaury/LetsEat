@@ -45,6 +45,8 @@ class RestaurantDetailViewController: UITableViewController {
             switch identifier {
             case Segue.showReview.rawValue:
                 showReview(segue: segue)
+            case Segue.showPhotoFilter.rawValue:
+                showPhotoFilter(segue: segue)
             default:
                 print("Segue not added")
             }
@@ -58,6 +60,13 @@ private extension RestaurantDetailViewController {
     
     func showReview(segue: UIStoryboardSegue) {
         guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? ReviewFormViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    func showPhotoFilter(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? PhotoFilterViewController else {
             return
         }
         viewController.selectedRestaurantID = selectedRestaurant?.restaurantID

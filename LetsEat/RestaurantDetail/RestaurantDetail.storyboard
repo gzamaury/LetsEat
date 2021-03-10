@@ -242,7 +242,7 @@
                                                                     <rect key="frame" x="-0.5" y="0.0" width="120" height="62"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <connections>
-                                                                        <segue destination="GBa-F2-6Oj" kind="presentation" id="9tb-aG-qwY"/>
+                                                                        <segue destination="GBa-F2-6Oj" kind="presentation" identifier="showPhotoFilter" id="9tb-aG-qwY"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
