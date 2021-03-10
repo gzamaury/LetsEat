@@ -52,7 +52,7 @@ class CoreDataManager: NSObject {
         }
     }
     
-    func fetchReviews(by identifier: Int32) -> [ReviewItem] {
+    func fetchReviews(by identifier: Int) -> [ReviewItem] {
         let moc = container.viewContext
         let request: NSFetchRequest<Review> = Review.fetchRequest()
         let predicate = NSPredicate(format: "restaurantID = %i", Int32(identifier))
