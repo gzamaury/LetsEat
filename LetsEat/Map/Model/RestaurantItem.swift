@@ -19,6 +19,7 @@ class RestaurantItem: NSObject, MKAnnotation, Decodable {
     var postalCode: String?
     var state: String?
     var imageURL: String?
+    var restaurantID: Int?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -29,6 +30,7 @@ class RestaurantItem: NSObject, MKAnnotation, Decodable {
         case postalCode = "postal_code"
         case state
         case imageURL = "image_url"
+        case restaurantID = "id"
     }
     
     var title: String? {
