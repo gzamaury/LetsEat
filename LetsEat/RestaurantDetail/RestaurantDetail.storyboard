@@ -288,7 +288,7 @@
                                                                     <rect key="frame" x="-0.5" y="0.0" width="120" height="62"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <connections>
-                                                                        <segue destination="XG8-Ri-pIR" kind="presentation" id="lDE-DR-HB9"/>
+                                                                        <segue destination="XG8-Ri-pIR" kind="presentation" identifier="showReview" id="lDE-DR-HB9"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>

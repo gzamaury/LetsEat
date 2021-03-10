@@ -18,6 +18,7 @@ class ReviewFormViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedRestaurantID as Any)
     }
 }
 
