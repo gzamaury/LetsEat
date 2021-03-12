@@ -28,6 +28,12 @@ class CoreDataManager: NSObject {
          }
      }
     
+    func fetchRestaurantRating(by identifier: Int) -> Float {
+        let reviews = fetchReviews(by: identifier).map({ $0 })
+        let sum = reviews.reduce(0, { $0 + ($1.rating ?? 0) })
+        return sum / Float(reviews.count)
+    }
+    
     func addReview(_ item: ReviewItem) {
         let review = Review(context: container.viewContext)
         review.name = item.name
