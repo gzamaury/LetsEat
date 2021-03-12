@@ -468,10 +468,10 @@
             </objects>
             <point key="canvasLocation" x="4596" y="-349"/>
         </scene>
-        <!--View Controller-->
+        <!--Reviews View Controller-->
         <scene sceneID="s68-WA-D2y">
             <objects>
-                <viewController id="I7Z-yA-lrD" sceneMemberID="viewController">
+                <viewController id="I7Z-yA-lrD" customClass="ReviewsViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2e-3Y-CNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,7 +528,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5" customClass="RatingView" customModule="LetsEat" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5" customClass="RatingsView" customModule="LetsEat" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="25" width="117" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -538,7 +538,7 @@
                                                 </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="CZq-Mn-9W5" firstAttribute="leading" secondItem="0gs-9C-p7g" secondAttribute="leading" constant="10" id="6fO-8t-0yg"/>
                                             <constraint firstItem="yJy-Me-hbd" firstAttribute="top" secondItem="0gs-9C-p7g" secondAttribute="top" constant="5" id="8v3-J6-aRk"/>
@@ -565,6 +565,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="I7Z-yA-lrD" id="mHt-dL-2XL"/>
+                                    <outlet property="delegate" destination="I7Z-yA-lrD" id="dvW-up-koV"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -576,22 +580,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KYY-TR-pBi"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="G3d-i3-aYj" id="6nS-kD-gcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sv-SZ-nNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4244" y="215"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Reviews View Controller-->
         <scene sceneID="OuK-dn-K2Q">
             <objects>
-                <viewController id="Kqe-22-GEj" sceneMemberID="viewController">
+                <viewController id="Kqe-22-GEj" customClass="PhotoReviewsViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JkL-eZ-cdT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-1f-9vB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-1f-9vB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NQg-Zn-vm9">
                                     <size key="itemSize" width="50" height="50"/>
@@ -599,16 +605,49 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="t8a-Jk-OE5" customClass="PhotoCell" customModule="LetsEat" customModuleProvider="target">
+                                        <rect key="frame" x="12.5" y="0.0" width="350" height="208"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="208"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-I9-8ir">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="208"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="350" height="208"/>
+                                        <connections>
+                                            <outlet property="imgReview" destination="Gma-I9-8ir" id="uSj-h7-WS3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kqe-22-GEj" id="ues-IK-EuO"/>
+                                    <outlet property="delegate" destination="Kqe-22-GEj" id="xhp-XL-qEa"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="leading" secondItem="JkL-eZ-cdT" secondAttribute="leading" id="SgO-93-Rtd"/>
+                            <constraint firstAttribute="trailing" secondItem="Pkx-1f-9vB" secondAttribute="trailing" id="iuT-9v-bXi"/>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="top" secondItem="JkL-eZ-cdT" secondAttribute="top" id="lHu-4e-cTQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Pkx-1f-9vB" secondAttribute="bottom" id="nch-mU-qKY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Z3F-Su-FQe"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Pkx-1f-9vB" id="rhg-eW-8vu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcE-61-elL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4903" y="215"/>
+            <point key="canvasLocation" x="4901.6000000000004" y="214.99250374812596"/>
         </scene>
         <!--PhotoFilter-->
         <scene sceneID="10V-97-DCA">
