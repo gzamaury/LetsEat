@@ -10,18 +10,23 @@ import UIKit
 import CoreData
 
 class CoreDataManager: NSObject {
-    let container: NSPersistentContainer
-    
-    override init() {
-        container = NSPersistentContainer(name: "LetsEatModel")
-        container.loadPersistentStores { (storeDesc, error) in
-            guard error == nil else {
-                print(error?.localizedDescription as Any)
-                return
-            }
-        }
-        super.init()
-    }
+    static let sharedContainer: NSPersistentContainer =
+     {
+         let container = NSPersistentContainer(name: "LetsEatModel")
+         container.loadPersistentStores { (storeDesc, error) in
+             guard error == nil else {
+                 print("on init container: \(error?.localizedDescription as Any)")
+                 return
+             }
+         }
+         return container
+     }()
+     
+     var container: NSPersistentContainer {
+         get {
+             CoreDataManager.sharedContainer
+         }
+     }
     
     func addReview(_ item: ReviewItem) {
         let review = Review(context: container.viewContext)
