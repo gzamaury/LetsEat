@@ -331,7 +331,7 @@
                                                     <rect key="frame" x="0.0" y="1" width="375" height="214"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <connections>
-                                                        <segue destination="I7Z-yA-lrD" kind="embed" id="ZCu-gC-tut"/>
+                                                        <segue destination="I7Z-yA-lrD" kind="embed" identifier="embedReviews" id="ZCu-gC-tut"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -371,7 +371,7 @@
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxH-MY-haV">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                                                     <connections>
-                                                        <segue destination="Kqe-22-GEj" kind="embed" id="Ruf-Pb-4z0"/>
+                                                        <segue destination="Kqe-22-GEj" kind="embed" identifier="embedPhotoReviews" id="Ruf-Pb-4z0"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -664,24 +664,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqk-2d-T93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5266" y="-217"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ewN-N1-hXd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1D-cJ-1Hd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vGz-oQ-yda">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gUI-DA-nYm" kind="relationship" relationship="rootViewController" id="j6o-5i-odO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bcu-l2-oVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3809" y="-348"/>
         </scene>
     </scenes>
     <resources>

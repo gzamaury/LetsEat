@@ -20,6 +20,8 @@ class PhotoFilterViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var imgExample: UIImageView!
     
+    var presentingRestauranDetailVC: RestaurantDetailViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
@@ -69,6 +71,8 @@ private extension PhotoFilterViewController {
                         self.showCameraUserInterface()
                     }
             }
+            @unknown default:
+                return
         }
     }
     
@@ -106,7 +110,7 @@ private extension PhotoFilterViewController {
             let manager = CoreDataManager()
             manager.addPhoto(item)
             
-            dismiss(animated: true, completion: nil)
+            presentingRestauranDetailVC?.photoReviewsDidSave(in: self)
         }
     }
 }

@@ -24,7 +24,10 @@ class PhotoReviewsViewController: UIViewController {
         super.viewDidAppear(animated)
         setupDefaults()
     }
-
+    
+    func reloadPhotoReviews() {
+        checkPhotos()
+    }
 }
 
 
@@ -48,8 +51,7 @@ private extension PhotoReviewsViewController {
     }
     
     func checkPhotos() {
-        let viewController = self.parent as? RestaurantDetailViewController
-        if let id = viewController?.selectedRestaurant?.restaurantID {
+        if let id = selectedRestaurantID {
             if data.count > 0 { data.removeAll() }
             data = manager.fetchPhotos(by: id)
             if data.count > 0 {

@@ -35,6 +35,9 @@ class RestaurantDetailViewController: UITableViewController {
     
     var selectedRestaurant: RestaurantItem?
     let manager = CoreDataManager()
+    
+    var reviewsViewController: ReviewsViewController?
+    var photoReviewsViewController: PhotoReviewsViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +51,22 @@ class RestaurantDetailViewController: UITableViewController {
                 showReview(segue: segue)
             case Segue.showPhotoFilter.rawValue:
                 showPhotoFilter(segue: segue)
+            case Segue.embedReviews.rawValue:
+                showEmbedReviews(segue: segue)
+            case Segue.embedPhotoReviews.rawValue:
+                showEmbedPhotoReviews(segue: segue)
             default:
                 print("Segue not added")
             }
         }
+    }
+    
+    func reviewsDidSave(in reviewForm: ReviewFormViewController) {
+        dismiss(reviewForm: reviewForm)
+    }
+    
+    func photoReviewsDidSave(in photoFilter: PhotoFilterViewController) {
+        dismiss(photoFilter: photoFilter)
     }
 }
 
@@ -64,13 +79,47 @@ private extension RestaurantDetailViewController {
             return
         }
         viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+        viewController.presentingRestauranDetailVC = self
     }
     
+    func showEmbedReviews(segue: UIStoryboardSegue) {
+        if let reviewsVC = segue.destination as? ReviewsViewController {
+            reviewsVC.selectedRestaurantID = selectedRestaurant?.restaurantID
+            reviewsViewController = reviewsVC
+        }
+    }
+    
+    func dismiss(reviewForm: ReviewFormViewController) {
+        reviewForm.dismiss(animated: true){
+            DispatchQueue.main.async {
+                self.createRating()
+                self.ratingView.setNeedsDisplay()
+                self.reviewsViewController?.reloadReviews()
+            }
+        }
+    }
+  
     func showPhotoFilter(segue: UIStoryboardSegue) {
         guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? PhotoFilterViewController else {
             return
         }
         viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+        viewController.presentingRestauranDetailVC = self
+    }
+    
+    func showEmbedPhotoReviews(segue: UIStoryboardSegue) {
+        if let photoReviewsVC = segue.destination as? PhotoReviewsViewController {
+            photoReviewsVC.selectedRestaurantID = selectedRestaurant?.restaurantID
+            photoReviewsViewController = photoReviewsVC
+        }
+    }
+    
+    func dismiss(photoFilter: PhotoFilterViewController) {
+        photoFilter.dismiss(animated: true){
+            DispatchQueue.main.async {
+                self.photoReviewsViewController?.reloadPhotoReviews()
+            }
+        }
     }
     
     func createRating() {

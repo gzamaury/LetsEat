@@ -317,8 +317,8 @@
                                                     <color key="textColor" name="LetsEat Dark Grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlA-fz-oVq">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlA-fz-oVq">
+                                                    <rect key="frame" x="10" y="3" width="355" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="36b-nG-eLs"/>
                                                     </constraints>
@@ -515,7 +515,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tCy-qN-odv"/>
+        <segue reference="4WD-OA-aE0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="american" width="88.5" height="64.5"/>

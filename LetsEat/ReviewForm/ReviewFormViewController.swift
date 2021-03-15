@@ -15,6 +15,8 @@ class ReviewFormViewController: UITableViewController {
     @IBOutlet weak var tfTitle: UITextField!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tvReview: UITextView!
+    
+    var presentingRestauranDetailVC: RestaurantDetailViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,6 @@ private extension ReviewFormViewController {
         let manager = CoreDataManager()
         manager.addReview(item)
         
-        dismiss(animated: true, completion: nil)
+        presentingRestauranDetailVC?.reviewsDidSave(in: self)
     }
 }

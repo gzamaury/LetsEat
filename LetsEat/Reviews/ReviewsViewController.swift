@@ -23,6 +23,10 @@ class ReviewsViewController: UIViewController {
         super.viewDidAppear(animated)
         setupDefaults()
     }
+    
+    func reloadReviews() {
+        checkReviews()
+    }
 }
 
 
@@ -46,8 +50,7 @@ private extension ReviewsViewController {
     }
     
     func checkReviews() {
-        let viewController = self.parent as? RestaurantDetailViewController
-        if let id = viewController?.selectedRestaurant?.restaurantID {
+        if let id = selectedRestaurantID {
             if data.count > 0 { data.removeAll() }
             data = manager.fetchReviews(by: id)
             if data.count > 0 {
@@ -79,6 +82,8 @@ extension ReviewsViewController: UICollectionViewDataSource {
         cell.lblDate.text = item.displayDate
         if let rating = item.rating {
             cell.ratingView.rating = CGFloat(rating)
+            cell.ratingView.isEnabled = false
+            cell.ratingView.setNeedsDisplay()
         }
         return cell
     }
