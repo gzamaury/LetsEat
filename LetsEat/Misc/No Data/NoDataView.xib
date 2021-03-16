@@ -42,7 +42,6 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="xsw-91-pM9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FnM-FU-pTc"/>
                 <constraint firstItem="xsw-91-pM9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="SLm-On-LpN"/>
