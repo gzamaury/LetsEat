@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ofj-pv-Ill">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="LwO-U2-jir">
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="LetsEat Dark Gray"/>
+                                                    <color key="backgroundColor" name="LetsEat Dark Grey"/>
                                                     <constraints>
                                                         <constraint firstItem="IGr-iQ-DOt" firstAttribute="top" secondItem="2YZ-hF-sZp" secondAttribute="top" constant="10" id="0a9-hl-GHy"/>
                                                         <constraint firstItem="6er-aK-n02" firstAttribute="top" secondItem="IGr-iQ-DOt" secondAttribute="bottom" constant="10" id="3rf-Ul-1Un"/>
@@ -142,7 +142,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="LetsEat Dark Grey"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="Cc4-T7-fCI"/>
                                                     </constraints>
@@ -227,7 +227,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4v-Gw-D9S">
                                                             <rect key="frame" x="33.5" y="4" width="120" height="62"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-photo" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-RR-rfz">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-RR-rfz">
                                                                     <rect key="frame" x="47" y="7" width="27" height="22"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
@@ -246,14 +246,12 @@
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="120" id="98p-KN-Fh6"/>
                                                                 <constraint firstAttribute="height" constant="62" id="nKy-OO-9zf"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="E4v-Gw-D9S" firstAttribute="centerY" secondItem="ZAs-c8-7VM" secondAttribute="centerY" id="1qZ-51-mjh"/>
                                                         <constraint firstItem="E4v-Gw-D9S" firstAttribute="centerX" secondItem="ZAs-c8-7VM" secondAttribute="centerX" id="omd-yY-U8Y"/>
@@ -273,7 +271,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-Ii-fOg">
                                                             <rect key="frame" x="33.5" y="4" width="120" height="62"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-review" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-Z0-z5X">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-Z0-z5X">
                                                                     <rect key="frame" x="47" y="4" width="26" height="25"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
@@ -292,14 +290,12 @@
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="62" id="Eah-c6-9Vh"/>
                                                                 <constraint firstAttribute="width" constant="120" id="GwS-gi-3CL"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="9aW-Ii-fOg" firstAttribute="centerX" secondItem="sg3-fQ-kK2" secondAttribute="centerX" id="HBA-kf-VQZ"/>
                                                         <constraint firstItem="9aW-Ii-fOg" firstAttribute="centerY" secondItem="sg3-fQ-kK2" secondAttribute="centerY" id="LB6-hF-nOb"/>
@@ -434,7 +430,6 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -667,15 +662,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="detail-logo" width="220" height="112"/>
         <image name="heart-unselected" width="44" height="44"/>
         <image name="icon-calendar" width="16" height="16"/>
-        <image name="icon-photo" width="27" height="22"/>
-        <image name="icon-review" width="26" height="25"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="time-bg" width="68" height="27"/>
-        <namedColor name="LetsEat Dark Gray">
-            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="LetsEat Dark Grey">
             <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

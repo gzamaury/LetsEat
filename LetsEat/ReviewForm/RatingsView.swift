@@ -26,7 +26,7 @@ class RatingsView: UIControl {
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        context!.setFillColor(UIColor.systemBackground.cgColor)
         context!.fill(rect)
         
         let availWidth = rect.size.width
