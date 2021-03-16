@@ -339,7 +339,6 @@
                                                 <constraint firstItem="n7D-7c-pOD" firstAttribute="centerX" secondItem="cX2-UD-q7L" secondAttribute="centerX" id="z8N-HL-yRl"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="imgRestaurant" destination="WGv-Kw-3wX" id="0Ob-6v-9Vg"/>
                                             <outlet property="lblCuisine" destination="R9V-FY-Dd4" id="5Lo-kq-TfE"/>
