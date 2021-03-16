@@ -110,7 +110,6 @@
                                                 <constraint firstItem="GgZ-QU-rcF" firstAttribute="leading" secondItem="2xq-BW-ViV" secondAttribute="leading" id="rv4-NG-Uvb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="imgExplore" destination="fJ2-sQ-Udp" id="75c-SO-iAT"/>
                                             <outlet property="lblName" destination="mmO-N1-gTh" id="GzE-wH-DxC"/>
