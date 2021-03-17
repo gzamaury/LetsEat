@@ -427,11 +427,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-xs-IGC">
                                                     <rect key="frame" x="17" y="4" width="341" height="208.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-l0-bwa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="341" height="208"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-l0-bwa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="341" height="208.5"/>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="eZM-l0-bwa" firstAttribute="leading" secondItem="Wxn-xs-IGC" secondAttribute="leading" id="Dlg-81-oRg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eZM-l0-bwa" secondAttribute="trailing" id="Ha2-6b-5vh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="eZM-l0-bwa" secondAttribute="bottom" id="Nn3-1p-iPD"/>
+                                                        <constraint firstItem="eZM-l0-bwa" firstAttribute="top" secondItem="Wxn-xs-IGC" secondAttribute="top" id="m6L-e9-UJ9"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -627,10 +632,10 @@
                             </collectionView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="leading" secondItem="JkL-eZ-cdT" secondAttribute="leading" id="SgO-93-Rtd"/>
-                            <constraint firstAttribute="trailing" secondItem="Pkx-1f-9vB" secondAttribute="trailing" id="iuT-9v-bXi"/>
-                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="top" secondItem="JkL-eZ-cdT" secondAttribute="top" id="lHu-4e-cTQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Pkx-1f-9vB" secondAttribute="bottom" id="nch-mU-qKY"/>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="top" secondItem="Z3F-Su-FQe" secondAttribute="top" id="FQF-Lq-RAP"/>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="bottom" secondItem="Z3F-Su-FQe" secondAttribute="bottom" id="Ntb-a4-hG0"/>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="trailing" secondItem="Z3F-Su-FQe" secondAttribute="trailing" id="Qob-yk-fg7"/>
+                            <constraint firstItem="Pkx-1f-9vB" firstAttribute="leading" secondItem="Z3F-Su-FQe" secondAttribute="leading" id="dkg-2t-fNP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z3F-Su-FQe"/>
                     </view>
