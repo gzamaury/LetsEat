@@ -17,13 +17,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-0n-ut3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="SMS-4e-aZt"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RS5-5J-Wgc">
                                 <rect key="frame" x="0.0" y="400" width="375" height="223"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OI7-rY-Dp1">
                                     <size key="itemSize" width="116" height="203"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -71,7 +72,6 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0N4-0n-ut3" firstAttribute="trailing" secondItem="Pa9-bR-oFM" secondAttribute="trailing" id="6HO-sI-FlB"/>
                             <constraint firstItem="0N4-0n-ut3" firstAttribute="leading" secondItem="Pa9-bR-oFM" secondAttribute="leading" id="ECB-ff-zwq"/>
