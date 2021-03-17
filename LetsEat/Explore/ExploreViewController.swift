@@ -15,6 +15,8 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
     var selectedCity: LocationItem?
     var headerView: ExploreHeaderView!
     
+    fileprivate let minItemSpacing: CGFloat = 7
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
@@ -54,6 +56,15 @@ private extension ExploreViewController {
     
     func initialize() {
         manager.fetch()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let flow = UICollectionViewFlowLayout()
+        flow.sectionInset = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+        flow.minimumInteritemSpacing = 0
+        flow.minimumLineSpacing = 7
+        collectionView?.collectionViewLayout = flow
     }
     
     func showLocationList(segue: UIStoryboardSegue) {
@@ -111,5 +122,30 @@ extension ExploreViewController: UICollectionViewDataSource {
         cell.lblName.text = item.name
         cell.imgExplore.image = UIImage(named: item.image)
         return cell
+    }
+}
+
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension ExploreViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var factor = 0
+        var delta = 0
+        if Device.isPad {
+            factor = 3
+            delta = 50
+        } else {
+            factor = traitCollection.horizontalSizeClass == .compact ? 2 : 3
+            delta = traitCollection.horizontalSizeClass == .compact ? 10 : 70
+        }
+        let screenRect = collectionView.frame.size.width
+        let screenWidth = screenRect - (CGFloat(minItemSpacing) * CGFloat(factor + 1))
+        let cellWidth = screenWidth / CGFloat(factor)
+        let cellHeight = cellWidth - CGFloat(delta)
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: self.collectionView.frame.width, height: 100)
     }
 }
