@@ -17,6 +17,8 @@ class RestauranListViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    fileprivate let minItemSpacing: CGFloat = 7
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,14 +36,27 @@ class RestauranListViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        createData()
-        setupTitle()
+        initialize()
     }
 }
 
 
 // MARK: Private Extension
 private extension RestauranListViewController {
+    func initialize() {
+        createData()
+        setupTitle()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let flow = UICollectionViewFlowLayout()
+        flow.sectionInset = UIEdgeInsets.init(top: 7, left: 7, bottom: 7, right: 7)
+        flow.minimumInteritemSpacing = 0
+        flow.minimumLineSpacing = 7
+        collectionView?.collectionViewLayout = flow
+    }
+    
     func createData() {
         guard let location = selectedCity?.city, let filter = selectedType else { return }
         manager.fetch(by: location, with: filter) { _ in
@@ -95,5 +110,26 @@ extension RestauranListViewController: UICollectionViewDataSource {
             }
         }
         return cell
+    }
+}
+
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension RestauranListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var factor = 0
+        var delta = 0
+        if Device.isPad {
+            factor = 3
+            delta = -60
+        } else {
+            factor = traitCollection.horizontalSizeClass == .compact ? 1 : 2
+            delta = 90
+        }
+        let screenRect = collectionView.frame.size.width
+        let screenWidth = screenRect - (CGFloat(minItemSpacing) * CGFloat(factor + 1))
+        let cellWidth = screenWidth / CGFloat(factor)
+        let cellHeight = cellWidth - CGFloat(delta)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
